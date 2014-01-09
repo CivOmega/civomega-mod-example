@@ -1,7 +1,7 @@
 # CivOmega: Example Module
 
 A dummy module for [CivOmega][civomega_repo]. See
-[the CivOmega repo][civomega_repo] -- particularly, the `2.x` branch.
+[the CivOmega repo][civomega_repo].
 
 * **CivOmega Demo**: http://www.civomega.com/
 * **CivOmega Repo**: https://github.com/CivOmega/civomega
