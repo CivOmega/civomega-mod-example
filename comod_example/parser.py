@@ -30,7 +30,11 @@ def answer_pattern(pattern, args):
     is_werewolf = r.choice([True, False])
     return {
       'is_werewolf': is_werewolf,
-      'name': name
+      'name': name,
+      'plaintxt': '%s is%s a werewolf' % (
+          name,
+          " not" if is_werewolf else ""
+      )
     }
 
 ############################################################
