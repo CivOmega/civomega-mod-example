@@ -18,12 +18,12 @@ PATTERN_ARGS_RE = re.compile(r'{([A-Za-z0-9_]+)}')
 
 ############################################################
 # Pattern-dependent behavior
-def answer_pattern(pattern_str, args):
+def answer_pattern(pattern, args):
     """
     Returns a `dict` representing the answer to the given
     pattern & pattern args.
     """
-    if pattern_str not in PATTERNS:
+    if pattern not in PATTERNS:
       return None
     if len(args) != 1:
       return None
@@ -32,7 +32,7 @@ def answer_pattern(pattern_str, args):
     # by matching the positional args with the original
     # positional item in the pattern. in this case,
     # we're always matching "person=foo".
-    args_keys = PATTERN_ARGS_RE.findall(pattern_str)
+    args_keys = PATTERN_ARGS_RE.findall(pattern)
     kwargs = dict(zip(args_keys,args))
     person = kwargs['person']
 
